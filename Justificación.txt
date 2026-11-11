@@ -1,0 +1,7 @@
+Justificación de la estructura de datos utilizada:
+
+Vamos a utilizar una Matriz por que nuestra sala de cine estará compuesta por un conjunto de asientos agrupados en columnas y filas de mismo tamaño, creando lo que haría fácil usar una Matriz como la representación de estos asientos.
+
+Haremos que la matriz sea de booleanos ya que los asientos solo tendrán dos estados; ocupados y disponibles, con esto la información que necesita el sistema para funcionar tendrá un fácil alcance y será claro entender.
+
+Para ubicar un asiento se usaran como coordenadas la fila y columna a la que pertenecen, lo que hará visualmente al usuario fácil de entender donde esta ese asiento.
