@@ -1,0 +1,161 @@
+Método mostrarMatrizAsientos(matriz):
+    // Recorre y despliega visualmente la matriz de filas y columnas
+    Para i desde 0 hasta FilaMax - 1 Hacer
+        Para j desde 0 hasta ColumnaMax - 1 Hacer
+            Imprimir(matriz[i][j])
+        Fin Para
+    Fin Para
+Fin Método
+
+----
+
+Método reservarAsiento(matriz):
+Repetir
+    Repetir
+        Escribir("Ingrese la fila del asiento:")
+        Leer(fila)
+        Escribir("Ingrese la columna del asiento:")
+        Leer(columna)
+        
+        // Comprobar que las coordenadas estén dentro de los límites de la matriz
+        validas = (fila >= 0 Y fila < FilaMax Y columna >= 0 Y columna < ColumnaMax)
+        Si NO validas Entonces
+            Escribir("Coordenadas inválidas. Intente de nuevo.")
+        Fin Si
+    Hasta que validas == Verdadero
+    
+    // Verificar el estado actual del asiento en la matriz
+    Si matriz[fila][columna] == Falso Entonces
+        matriz[fila][columna] = Verdadero
+        Escribir("Asiento reservado con éxito.")
+    Sino
+        Escribir("El asiento ya se encuentra ocupado.")
+        validas = Falso
+    Fin Si
+Hasta que validas == Verdadero 
+Fin Método
+
+----
+
+Método liberarAsiento(matriz):
+ Repetir
+    Repetir
+        Escribir("Ingrese la fila del asiento:")
+        Leer(fila)
+        Escribir("Ingrese la columna del asiento:")
+        Leer(columna)
+        
+        validas = (fila >= 0 Y fila < FilaMax Y columna >= 0 Y columna < ColumnaMax)
+        Si NO validas Entonces
+            Escribir("Coordenadas inválidas. Intente de nuevo.")
+        Fin Si
+    Hasta que validas == Verdadero
+    
+    Si matriz[fila][columna] == Verdadero Entonces
+        matriz[fila][columna] = Falso
+        Escribir("Asiento liberado (cancelado) con éxito.")
+    Sino
+        Escribir("El asiento ya está libre.")
+        validas = Falso
+    Fin Si
+Hasta que validas == Verdadero 
+Fin Método
+
+----
+
+Método consultarDisponibilidad(matriz):
+    Escribir("Ingrese la fila a consultar:")
+    Leer(fila)
+    Escribir("Ingrese la columna a consultar:")
+    Leer(columna)
+    
+    // Búsqueda directa en la posición de la matriz
+    estado = matriz[fila][columna]
+    Si estado = Verdadero Entonces
+    	Escribir("El estado del asiento es: Ocupado")
+    Sino
+    	Escribir("El estado del asiento es: Libre")
+    FinSi
+Fin Método
+
+----
+
+Método contarOcupadosYDisponibles(matriz):
+    libres = 0
+    ocupados = 0
+    
+    Para i desde 0 hasta FilaMax - 1 Hacer
+        Para j desde 0 hasta ColumnaMax - 1 Hacer
+            Si matriz[i][j] == Falso Entonces
+                libres = libres + 1
+            Sino
+                ocupados = ocupados + 1
+            Fin Si
+        Fin Para
+    Fin Para
+    
+    Escribir("Asientos libres: ", libres)
+    Escribir("Asientos ocupados: ", ocupados)
+Fin Método
+
+----
+
+Método indicarPorcentajeDeOcupacion(matriz):
+    ocupados = 0
+    totalAsientos = FilaMax * ColumnaMax
+    
+    Para i desde 0 hasta FilaMax - 1 Hacer
+        Para j desde 0 hasta ColumnaMax - 1 Hacer
+            Si matriz[i][j] != Falso Entonces
+                ocupados = ocupados + 1
+            Fin Si
+        Fin Para
+    Fin Para
+    
+    porcentaje = (ocupados / totalAsientos) * 100
+    Escribir("El porcentaje de ocupación es: ", porcentaje, "%")
+Fin Método
+
+----
+
+Algoritmo SistemaDeAdministracionDeAsientosDeCine
+    Definir matriz[5][5] de Bool // Ejemplo de matriz de asientos
+    
+    Repetir
+        Imprimir("--- MENÚ ---")
+        Imprimir("1. Mostrar Matriz")
+        Imprimir("2. Reservar Asiento")
+        Imprimir("3. Liberar Asiento")
+        Imprimir("4. Consultar Disponibilidad")
+        Imprimir("5. Contar Ocupados y Disponibles")
+        Imprimir("6. Indicar Porcentaje de Ocupación")
+	Imprimir("7. Salir")
+        Imprimir("Seleccione una opción:")
+        Leer(numero)
+        
+        // Validación de opción de menú
+        valido = (numero >= 1 Y numero <= 7)
+        Si NO valido Entonces
+            Escribir("Opción inválida, introduzca un número del 1 al 7.")
+        Fin Si
+    Hasta que valido == Verdadero
+
+    Segun sea numero:
+        Caso 1:
+            mostrarMatrizAsientos(matriz)
+        Caso 2:
+            reservarAsiento(matriz)
+        Caso 3:
+            liberarAsiento(matriz)
+        Caso 4:
+            consultarDisponibilidad(matriz)
+        Caso 5:
+            contarOcupadosYDisponibles(matriz)
+        Caso 6:
+            indicarPorcentajeDeOcupacion(matriz)
+        Default:
+            Escribir("Saliendo del sistema...")
+    Fin Segun
+Fin Algoritmo
+
+
