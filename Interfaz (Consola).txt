@@ -1,0 +1,9 @@
+--- MENÚ ---
+1. Mostrar Matriz
+2. Reservar Asiento
+3. Liberar Asiento
+4. Consultar Disponibilidad
+5. Contar Ocupados y Disponibles
+6. Indicar Porcentaje de Ocupación
+7. Salir
+Seleccione una opción:
