@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 2\\proyecto_asientos_cine\\CodigoFuente\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0773A748-4F5E-47EE-B47A-336364FD9816}|CodigoFuente.csproj|c:\\users\\aldah\\onedrive\\desktop\\el mejor proyecto 2\\proyecto_asientos_cine\\codigofuente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0773A748-4F5E-47EE-B47A-336364FD9816}|CodigoFuente.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 2\\proyecto_asientos_cine\\CodigoFuente\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 2\\proyecto_asientos_cine\\CodigoFuente\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwC4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T00:09:17.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
