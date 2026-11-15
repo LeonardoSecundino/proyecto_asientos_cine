@@ -6,3 +6,11 @@ C:\Users\aldah\OneDrive\Desktop\El mejor proyecto 2\proyecto_asientos_cine\Codig
 C:\Users\aldah\OneDrive\Desktop\El mejor proyecto 2\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.exe
 C:\Users\aldah\OneDrive\Desktop\El mejor proyecto 2\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.pdb
 C:\Users\aldah\OneDrive\Desktop\El mejor proyecto 2\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.exe.config
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\bin\Debug\CodigoFuente.exe.config
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\bin\Debug\CodigoFuente.exe
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\bin\Debug\CodigoFuente.pdb
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.csproj.AssemblyReference.cache
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.exe.config
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.csproj.CoreCompileInputs.cache
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.exe
+C:\Users\AMD RYZEN\Desktop\proyecto_asientos_cine\proyecto_asientos_cine\CodigoFuente\obj\Debug\CodigoFuente.pdb

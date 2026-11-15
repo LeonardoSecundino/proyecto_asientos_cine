@@ -42,7 +42,7 @@ namespace CodigoFuente
                 switch (Num)
                 {
                     case 1:
-                        Console.WriteLine("Esta opcion no esta disponible en esta version");
+                        mostrarMatriz(Asientos);
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -57,17 +57,17 @@ namespace CodigoFuente
                         Console.Clear();
                         break;
                     case 4:
-                        Console.WriteLine("Esta opcion no esta disponible en esta version");
+                        consultarDisponibilidad(Asientos);
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 5:
-                        Console.WriteLine("Esta opcion no esta disponible en esta version");
+                        contarOcupadosYDisponibles(Asientos);
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 6:
-                        Console.WriteLine("Esta opcion no esta disponible en esta version");
+                        IndicarPorcentajeDeOcupacion(Asientos);
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -187,6 +187,130 @@ namespace CodigoFuente
                     Validas = false;
                 }
             } while (!Validas);
+        }
+        #endregion
+        #region módulo de consulta.
+        static void mostrarMatriz(bool[,] Asientos)
+        {
+            Console.WriteLine("\n--- ESTADO DE LOS ASIENTOS ---");
+            Console.WriteLine("[O] = Libre   [X] = Ocupado\n");
+
+            Console.Write("   ");
+            for (int col = 0; col < Asientos.GetLength(1); col++)
+            {
+                Console.Write($" {col} ");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < Asientos.GetLength(0); i++)
+            {
+                Console.Write($" {i} ");
+
+
+                for (int j = 0; j < Asientos.GetLength(1); j++)
+                {
+                    if (Asientos[i, j] == true)
+                    {
+                        Console.Write("[X]");
+                    }
+                    else
+                    {
+                        Console.Write("[O]"); 
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void consultarDisponibilidad(bool[,] Asientos)
+        {
+            int fila;
+            int columna;
+            bool Validas;
+
+            do
+            {
+                Console.WriteLine("Ingrese la fila a consultar:");
+                Validas = !int.TryParse(Console.ReadLine(), out fila);
+                if (Validas)
+                {
+                    Console.WriteLine("Opción inválida, introduce un numero.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            } while (Validas);
+
+            do
+            {
+                Console.WriteLine("Ingrese la columna a consultar:");
+                Validas = !int.TryParse(Console.ReadLine(), out columna);
+                if (Validas)
+                {
+                    Console.WriteLine("Opción inválida, introduce un numero.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            } while (Validas);
+
+            if (fila >= 0 && fila < Asientos.GetLength(0) && columna >= 0 && columna < Asientos.GetLength(1))
+            {
+                bool estado = Asientos[fila, columna];
+
+                if (estado == true)
+                {
+                    Console.WriteLine("El estado del asiento es: Ocupado");
+                }
+                else
+                {
+                    Console.WriteLine("El estado del asiento es: Libre");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Coordenadas inválidas. Intente de nuevo.");
+            }
+        }
+
+        public static void contarOcupadosYDisponibles(bool[,] Asientos)
+        {
+            int libres = 0;
+            int ocupados = 0;
+
+            for (int i = 0; i < Asientos.GetLength(0); i++)
+            {
+                for (int j = 0; j < Asientos.GetLength(1); j++)
+                {
+                    if (Asientos[i, j] == false)
+                    {
+                        libres++;
+                    }
+                    else
+                    {
+                        ocupados++;
+                    }
+                }
+            }
+            Console.WriteLine($"Asientos libres: {libres}");
+            Console.WriteLine($"Asientos ocupados: {ocupados}");
+        }
+
+        public static void IndicarPorcentajeDeOcupacion(bool[,] Asientos)
+        {
+            double ocupados = 0;
+            int totalAsientos = Asientos.GetLength(0) * Asientos.GetLength(1);
+
+            for (int i = 0; i < Asientos.GetLength(0); i++)
+            {
+                for (int j = 0; j < Asientos.GetLength(1); j++)
+                {
+                    if (Asientos[i, j] != false)
+                    {
+                        ocupados++;
+                    }
+                }
+            }
+            double porcentaje = (ocupados / totalAsientos) * 100;
+            Console.WriteLine($"El porcentaje de ocupación es: {porcentaje}%");
         }
         #endregion
     }
