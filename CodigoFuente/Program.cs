@@ -294,6 +294,8 @@ namespace CodigoFuente
             Console.WriteLine($"Asientos ocupados: {ocupados}");
         }
 
+        #endregion
+        #region módulo de Porcentaje.
         public static void IndicarPorcentajeDeOcupacion(bool[,] Asientos)
         {
             double ocupados = 0;
