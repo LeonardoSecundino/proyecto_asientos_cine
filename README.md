@@ -1,16 +1,16 @@
 # proyecto\_asientos\_cine
 
-\#Integrantes:
+# Integrantes:
 Aldahir Castor Fombona
 Leonardo Daniel Secundino Villa
 
-\#Objetivos
+# Objetivos
 Objetivo: Administrar asientos de una sala de cine
 Objetivos especificos: Casos de uso
 
-\#Entregables:
+# Entregables:
 Entregables: Análisis del problema, Diseño algorítmico, Diseño de interfaz, Codigo, Documentación y  Presentación
 
-\#Limites
+# Limites
 Una sala de cine.
 
